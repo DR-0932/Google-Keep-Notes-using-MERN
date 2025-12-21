@@ -21,8 +21,12 @@ export default function Inputbox(){
  const handleSubmit=async()=>{
   // POST request + Instant state update in store  
   await addNote({title,content}); 
+  settitle("");
   // GET request
   await getNotes();
+  setContent("");
+  console.log(JSON.stringify(content))
+
  }
 
  
@@ -32,7 +36,7 @@ export default function Inputbox(){
     if(noteRef.current && !noteRef.current.contains(e.target)){
       if(title.trim() || content.trim()){
         addNote({title,content});
-        settitle("");
+        settitle(""); 
         setContent("");
       }
       setIsExpanded(false);

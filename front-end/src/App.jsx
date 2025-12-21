@@ -5,7 +5,7 @@ import Sidebar from './components/Sidebar'
 import Notesection from './components/Notesection'
 
 function App() {
-  const [count, setCount] = useState(0)
+    
 
   return (
     <>

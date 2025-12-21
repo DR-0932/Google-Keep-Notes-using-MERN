@@ -27,6 +27,8 @@ export const zustStore = create((set)=>({
     }));
 
   },
+
+
 updateNote: async (id, updates) => {
   const res = await fetch(`http://localhost:3000/notes/${id}`, {
     method: "PATCH",

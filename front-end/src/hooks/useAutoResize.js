@@ -2,10 +2,9 @@ import { useEffect } from "react";
 
 export function useAutoResize(ref, value) {
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
+    if (!ref.current) return;
 
-    el.style.height = "auto";
-    el.style.height = el.scrollHeight + "px";
+    ref.current.style.height = "auto";
+    ref.current.style.height = ref.current.scrollHeight + "px";
   }, [value, ref]);
 }

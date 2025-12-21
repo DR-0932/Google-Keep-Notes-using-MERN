@@ -18,7 +18,6 @@ app.get("/notes", (req, res) => {
 // CREATE a note
 app.post("/notes", (req, res) => {
   const { title, content, dateCreated } = req.body;
-
   const newNote = {
     id: String(Date.now()), // simple unique id
     title,
@@ -28,8 +27,10 @@ app.post("/notes", (req, res) => {
   };
   
   notes.push(newNote);
-  
+
   res.status(201).json(newNote);
+  
+
 });
 
 // GET a single note by id
@@ -49,8 +50,8 @@ app.patch("/notes/:id", (req, res) => {
 
   const { title, content } = req.body;
 
-  if (title !== undefined) note.title = title;
-  if (content !== undefined) note.content = content;
+  note.title = title;
+  note.content = content;
 
   res.json(note);
 });
