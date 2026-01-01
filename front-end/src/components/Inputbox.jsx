@@ -56,7 +56,7 @@ useEffect(()=>{
   },[content]);
 
   return(<>
-    <div ref={noteRef} className="bg-[#202125] text-gray-300 w-full max-w-[566px] rounded-lg px-4 py-3  border border-[#545659]">
+    <div ref={noteRef} className="bg-[#202125] text-gray-300 w-full max-w-[566px] rounded-lg px-4 py-3  border border-white  my-10 ">
       {Isexpanded && (
       
       <input 

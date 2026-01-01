@@ -9,21 +9,35 @@ function App() {
 
   return (
     <>
-    <div className='flex bg-red-300'> <Navbar></Navbar></div>
+    <div className=''> 
+      
+      <Navbar/>
+    
+    </div>
+
     <div className='grid grid-cols-[20%_70%]'>
 
       <div className='sidebar'>
-        <Sidebar></Sidebar>
+
+        <Sidebar/>
+
       </div>
-      <div className="main bg-gray-500">
+
+      <div className="bg-[#202125]">
+       
         <div>
-          <Inputbox></Inputbox>
+          
+          <Inputbox/>
+
         </div>
         <div>
-          <Notesection></Notesection>
+
+          <Notesection/>
+          
         </div>
 
-      </div>     
+      </div>
+
     </div>
     </>
   )
